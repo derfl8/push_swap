@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/14 16:55:30 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/09 17:09:38 by abegou           ###   ########.fr       */
+/*   Created: 2026/03/09 17:37:38 by abegou            #+#    #+#             */
+/*   Updated: 2026/03/09 17:39:14 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#ifndef PUSH_SWAP_H
 
-size_t	ft_strlen(const char *s)
-{
-	const char	*tmp = s;
+# define PUSH_SWAP_H
+# include <stdlib.h>
+# include <unistd.h>
+# include "libft/libft.h"
+# include "ft_printf/ft_printf.h"
 
-	while (*tmp)
-		tmp++;
-	return (tmp - s);
-}
+#endif

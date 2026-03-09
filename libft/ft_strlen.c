@@ -6,7 +6,7 @@
 /*   By: abegou <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 16:55:30 by abegou            #+#    #+#             */
-/*   Updated: 2025/10/18 13:52:46 by abegou           ###   ########.fr       */
+/*   Updated: 2026/01/13 22:22:35 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,9 @@
 
 size_t	ft_strlen(const char *s)
 {
-	size_t	i;
+	const char	*tmp = s;
 
-	i = 0;
-	while (s[i])
-	{
-		i++;
-	}
-	return (i);
+	while (*tmp)
+		tmp++;
+	return (tmp - s);
 }

@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
+/*   By: abegou <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/14 16:55:30 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/09 17:09:38 by abegou           ###   ########.fr       */
+/*   Created: 2026/01/09 17:27:03 by abegou            #+#    #+#             */
+/*   Updated: 2026/01/09 17:57:08 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	const char	*tmp = s;
-
-	while (*tmp)
-		tmp++;
-	return (tmp - s);
+	if (!lst)
+		return ;
+	del(lst -> content);
+	free(lst);
 }

@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
+/*   By: abegou <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/14 16:55:30 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/09 17:09:38 by abegou           ###   ########.fr       */
+/*   Created: 2026/01/08 20:14:25 by abegou            #+#    #+#             */
+/*   Updated: 2026/01/08 20:32:46 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-size_t	ft_strlen(const char *s)
+t_list	*ft_lstlast(t_list *lst)
 {
-	const char	*tmp = s;
-
-	while (*tmp)
-		tmp++;
-	return (tmp - s);
+	if (!lst)
+		return (0);
+	while (lst -> next != NULL)
+		lst = lst -> next;
+	return (lst);
 }

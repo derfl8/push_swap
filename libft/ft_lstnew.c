@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
+/*   By: abegou <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/14 16:55:30 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/09 17:09:38 by abegou           ###   ########.fr       */
+/*   Created: 2026/01/05 16:03:48 by abegou            #+#    #+#             */
+/*   Updated: 2026/01/05 18:25:55 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-size_t	ft_strlen(const char *s)
+t_list	*ft_lstnew(void *content)
 {
-	const char	*tmp = s;
+	t_list	*new_node;
 
-	while (*tmp)
-		tmp++;
-	return (tmp - s);
+	new_node = malloc(sizeof(t_list));
+	if (!new_node)
+		return (NULL);
+	new_node -> content = content;
+	new_node -> next = NULL;
+	return (new_node);
 }

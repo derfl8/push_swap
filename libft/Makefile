@@ -39,6 +39,17 @@ ft_putendl_fd.c \
 ft_putnbr_fd.c \
 ft_itoa.c \
 
+SRCSB    = \
+ft_lstnew.c \
+ft_lstadd_front.c \
+ft_lstsize.c \
+ft_lstlast.c \
+ft_lstadd_back.c \
+ft_lstdelone.c \
+ft_lstclear.c \
+ft_lstiter.c \
+ft_lstmap.c \
+
 OBJS    = $(SRCS:.c=.o)
 
 all: $(NAME)
@@ -48,9 +59,14 @@ $(NAME): $(OBJS)
 
 %.o : %.c $(HEADER)
 	@$(CC) $(CFLAGS) -c $< -o $@
+	
+OBJSB	= $(SRCSB:.c=.o)
+
+bonus: $(OBJSB) $(OBJS)
+	@ar -crs $(NAME) $(OBJSB) $(OBJS)
 
 clean:
-	@rm -f $(OBJS)
+	@rm -f $(OBJS) $(OBJSB)
 
 fclean: clean
 	@rm -f $(NAME)
