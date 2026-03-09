@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 15:50:08 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/09 19:01:59 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/09 20:02:34 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static int	argcheck(char *arg)
 {
-	int	i;
-	
+	int		i;
+
 	i = 0;
 	while (arg[i])
 	{
@@ -24,7 +24,8 @@ static int	argcheck(char *arg)
 		else if (arg[i] == '-'
 			&& (arg[i + 1] == ' ' || arg[i + 1] == '-' || arg[i + 1] == '\0'))
 			return (1);
-		else if (arg[i] == '-' && (arg[i - 1] >= '0' && arg[i - 1] <= '9'))
+		else if (i > 0
+			&& (arg[i] == '-' && (arg[i - 1] >= '0' && arg[i - 1] <= '9')))
 			return (1);
 		i++;
 	}
@@ -34,12 +35,9 @@ static int	argcheck(char *arg)
 int	main(int ac, char **av)
 {
 	int	valid_or_not;
-	
+
 	if (ac < 2)
-	{
-		write(2, "Error\n", 6);
 		return (0);
-	}
 	while (--ac > 0)
 	{
 		valid_or_not = argcheck(av[ac]);
