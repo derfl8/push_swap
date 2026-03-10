@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin_max.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/29 18:18:44 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/10 19:07:07 by abegou           ###   ########.fr       */
+/*   Created: 2026/03/10 18:53:20 by abegou            #+#    #+#             */
+/*   Updated: 2026/03/10 20:05:47 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2 int )
+char	*ft_strjoin_max(char const *s1, char const *s2 int )
 {
 	char	*ret;
 

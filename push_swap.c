@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 15:50:08 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/10 15:00:47 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/10 20:07:52 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,17 +39,23 @@ bool	int_check(char *arg)
 	return (true);
 }
 
-/*char	*argkiller(char **av)
+void	argkiller(int ac, char **av)
 {
-	while (av[i])
+	int		i;
+	int		j;
+
+	i = 0;
+	if (ac < 2)
+		return ;
+	--ac;
+	while (ac > i)
 	{
-		while (av[i][j])
-			av[i][j++];
+		j = ft_strlen(av[i]) ;
 		av[i][j] = ' ';
 		i++;
 	}
-	return (&av)
-}*/
+	return ;
+}
 
 bool	argcheck(char *arg)
 {
@@ -77,24 +83,18 @@ int	main(int ac, char **av)
 
 	if (ac < 2)
 		return (0);
-	while (--ac > 0)
+	argkiller(ac, av);
+	ft_printf("%s", av[1]);
+	is_valid = argcheck(av[1]);
+	if (is_valid == false)
 	{
-		is_valid = argcheck(av[ac]);
-		if (is_valid == false)
-		{
-			write(2, "Error\n", 6);
-			return (0);
-		}
-		else 
-		{
-			is_valid = int_check(av[ac]);
-			if (is_valid == false)
-			{
-				write(2, "Error\n", 6);
-				return (0);
-			}
-		}
-		
+		write(2, "Error\n", 6);
+		return (0);
 	}
-	return (0);
+	is_valid = int_check(av[1]);
+	if (is_valid == false)
+	{
+		write(2, "Error\n", 6);
+		return (0);
+	}
 }
