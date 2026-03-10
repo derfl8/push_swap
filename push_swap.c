@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 15:50:08 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/10 12:42:01 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/10 14:00:06 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,25 @@ bool	int_check(char *arg)
 {
 	int		i;
 	int		j;
-	char	conv[13];
+	char	conv[12];
 	
-	ft_bzero(conv, 13);
+	ft_bzero(conv, 12);
 	i = 0;
 	j = 0;
-	while (arg[i] != ' ' && arg[i] != '\0')
+	while (arg[i] != '\0')
 	{
 		conv[j++] = arg[i++];
-		if (j > 12)
+		while (arg[i] == ' ' || arg[i] == '\0')
+		{
+			if (ft_atol(conv) > INT_MAX || ft_atol(conv) < INT_MIN)
+				return (false);
+			i++;
+			j = 0;
+			ft_bzero(conv, 12);
+		}
+		if (j > 11)
 			return (false);
 	}
-	if (ft_atol(conv) > INT_MAX || ft_atol(conv) < INT_MIN)
-		return (false);
-	else if (arg[i] != '\0')
-		int_check(arg);
 	return (true);
 }
 
@@ -46,7 +50,7 @@ bool	int_check(char *arg)
 	return (&av)
 }*/
 
-static bool	argcheck(char *arg)
+bool	argcheck(char *arg)
 {
 	int		i;
 
