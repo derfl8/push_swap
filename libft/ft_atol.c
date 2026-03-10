@@ -6,9 +6,11 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/09 19:29:55 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/09 19:38:04 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/10 12:04:18 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 static int	ft_isspace(int c)
 {
