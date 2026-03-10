@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 15:50:08 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/10 20:07:52 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/10 21:00:11 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,46 +15,19 @@
 bool	int_check(char *arg)
 {
 	int		i;
-	int		j;
-	char	conv[12];
+	char	**conv;
 
-	ft_bzero(conv, 12);
+	conv = ft_split(arg, ' ');
 	i = 0;
-	j = 0;
-	while (arg[i] != '\0')
+	while (conv[i])
 	{
-		conv[j++] = arg[i++];
-		while (arg[i] == ' ' || arg[i] == '\0')
-		{
-			if (ft_atol(conv) > INT_MAX || ft_atol(conv) < INT_MIN)
-				return (false);
-			j = 0;
-			ft_bzero(conv, 12);
-		}
-		if (arg[i] == ' ')
-			i++;
-		if (j > 11)
+		if (ft_strlen(conv[i]) > 11)
 			return (false);
-	}
-	return (true);
-}
-
-void	argkiller(int ac, char **av)
-{
-	int		i;
-	int		j;
-
-	i = 0;
-	if (ac < 2)
-		return ;
-	--ac;
-	while (ac > i)
-	{
-		j = ft_strlen(av[i]) ;
-		av[i][j] = ' ';
+		if (ft_atol(conv[i]) > INT_MAX || ft_atol(conv[i]) < INT_MIN)
+			return (false);
 		i++;
 	}
-	return ;
+	return (true);
 }
 
 bool	argcheck(char *arg)
@@ -75,6 +48,24 @@ bool	argcheck(char *arg)
 		i++;
 	}
 	return (true);
+}
+
+void	argkiller(int ac, char **av)
+{
+	int		i;
+	int		j;
+
+	i = 0;
+	if (ac < 2)
+		return ;
+	--ac;
+	while (ac > i)
+	{
+		j = ft_strlen(av[i]) ;
+		av[i][j] = ' ';
+		i++;
+	}
+	return ;
 }
 
 int	main(int ac, char **av)
