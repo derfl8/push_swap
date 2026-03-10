@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 15:50:08 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/10 14:00:06 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/10 15:00:47 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ bool	int_check(char *arg)
 	int		i;
 	int		j;
 	char	conv[12];
-	
+
 	ft_bzero(conv, 12);
 	i = 0;
 	j = 0;
@@ -28,10 +28,11 @@ bool	int_check(char *arg)
 		{
 			if (ft_atol(conv) > INT_MAX || ft_atol(conv) < INT_MIN)
 				return (false);
-			i++;
 			j = 0;
 			ft_bzero(conv, 12);
 		}
+		if (arg[i] == ' ')
+			i++;
 		if (j > 11)
 			return (false);
 	}
