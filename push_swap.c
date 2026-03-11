@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 15:50:08 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/11 13:43:57 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/11 13:48:02 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,11 @@ bool	int_check(char *arg)
 	i = 0;
 	while (conv[i])
 	{
-		if (ft_strlen(conv[i]) > 11)
+		if (ft_strlen(conv[i]) > 11 || (ft_atol(conv[i]) > INT_MAX || ft_atol(conv[i]) < INT_MIN))
+		{
+			ft_free(conv);
 			return (false);
-		if (ft_atol(conv[i]) > INT_MAX || ft_atol(conv[i]) < INT_MIN)
-			return (false);
+		}
 		printf("%lld\n", ft_atol(conv[i]));
 		i++;
 	}
