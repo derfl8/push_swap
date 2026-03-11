@@ -6,23 +6,46 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 14:09:48 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/11 14:12:53 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/11 15:48:56 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft/libft.h"
 #include "push_swap.h"
+#include <stdbool.h>
 #include <stdio.h>
+
+bool    dup_check(char **check)
+{
+    int i;
+    int j;
+
+    i = 0;
+    while (check[i])
+    {
+        j = i + 1;
+        while (check[j])
+        {
+            if (ft_atol(check[i]) == ft_atol(check[j]))
+                return (false);
+            j++;
+        }
+        i++;
+    }
+    return (true);
+}
 
 bool	int_check(char *arg)
 {
 	int		i;
 	char	**conv;
+    bool    is_valid;
 
 	conv = ft_split(arg, ' ');
 	i = 0;
 	while (conv[i])
 	{
-		if (ft_strlen(conv[i]) > 11 || (ft_atol(conv[i]) > INT_MAX || ft_atol(conv[i]) < INT_MIN))
+		if (ft_strlenin(conv[i]) > 11 || (ft_atol(conv[i]) > INT_MAX || ft_atol(conv[i]) < INT_MIN))
 		{
 			ft_free(conv);
 			return (false);
@@ -30,8 +53,9 @@ bool	int_check(char *arg)
 		printf("%lld\n", ft_atol(conv[i]));
 		i++;
 	}
+    is_valid = dup_check(conv);
 	ft_free(conv);
-	return (true);
+	return (is_valid);
 }
 
 bool	argcheck(char *arg)

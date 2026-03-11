@@ -6,13 +6,13 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 18:18:44 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/10 19:07:07 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/11 15:03:23 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2 int )
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*ret;
 
