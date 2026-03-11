@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   lst.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/09 17:37:38 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/11 17:46:45 by abegou           ###   ########.fr       */
+/*   Created: 2026/03/11 16:57:20 by abegou            #+#    #+#             */
+/*   Updated: 2026/03/11 17:41:36 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-
-# define PUSH_SWAP_H
-# include <stdlib.h>
-# include <unistd.h>
-# include "libft/libft.h"
-# include "ft_printf/ft_printf.h"
-# include <limits.h>
-# include <stdbool.h>
-
-bool    int_check(char *arg);
-bool	argcheck(char *arg);
-void	argkiller(int ac, char **av);
-bool    dup_check(char **check);
-
-#endif
+#include "push_swap.h"
+// 
+// t_list  do_stack(char   **parsed)
+// {
+    // int i;
+// 
+    // i = 0;
+// }

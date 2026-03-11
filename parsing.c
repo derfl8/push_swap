@@ -6,14 +6,11 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 14:09:48 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/11 15:48:56 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/11 16:57:54 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
 #include "push_swap.h"
-#include <stdbool.h>
-#include <stdio.h>
 
 bool    dup_check(char **check)
 {
@@ -50,7 +47,6 @@ bool	int_check(char *arg)
 			ft_free(conv);
 			return (false);
 		}
-		printf("%lld\n", ft_atol(conv[i]));
 		i++;
 	}
     is_valid = dup_check(conv);

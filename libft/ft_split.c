@@ -6,13 +6,13 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 19:28:50 by abegou            #+#    #+#             */
-/*   Updated: 2025/11/12 12:19:14 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/11 17:44:50 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	*ft_free(char **array)
+void	*ft_free(char **array)
 {
 	size_t	i;
 

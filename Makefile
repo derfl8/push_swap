@@ -7,6 +7,7 @@ LIBFT	= libft/libft.a
 SRCS	=	\
 push_swap.c	\
 parsing.c	\
+lst.c		\
 
 OBJS    = $(SRCS:.c=.o)
 

@@ -6,22 +6,11 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 15:50:08 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/11 14:12:29 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/11 17:41:08 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void	ft_free(char **arg)
-{
-	int	i;
-
-	i = 0;
-	while (arg[i])
-		free(arg[i++]);
-	free(arg);
-	return ;
-}
 
 void	argkiller(int ac, char **av)
 {
