@@ -6,11 +6,23 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 15:50:08 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/10 21:00:11 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/11 13:43:57 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <stdio.h>
+
+void	ft_free(char **arg)
+{
+	int	i;
+
+	i = 0;
+	while (arg[i])
+		free(arg[i++]);
+	free(arg);
+	return ;
+}
 
 bool	int_check(char *arg)
 {
@@ -25,8 +37,10 @@ bool	int_check(char *arg)
 			return (false);
 		if (ft_atol(conv[i]) > INT_MAX || ft_atol(conv[i]) < INT_MIN)
 			return (false);
+		printf("%lld\n", ft_atol(conv[i]));
 		i++;
 	}
+	ft_free(conv);
 	return (true);
 }
 
@@ -61,7 +75,7 @@ void	argkiller(int ac, char **av)
 	--ac;
 	while (ac > i)
 	{
-		j = ft_strlen(av[i]) ;
+		j = ft_strlen(av[i]);
 		av[i][j] = ' ';
 		i++;
 	}
@@ -75,7 +89,6 @@ int	main(int ac, char **av)
 	if (ac < 2)
 		return (0);
 	argkiller(ac, av);
-	ft_printf("%s", av[1]);
 	is_valid = argcheck(av[1]);
 	if (is_valid == false)
 	{
@@ -88,4 +101,5 @@ int	main(int ac, char **av)
 		write(2, "Error\n", 6);
 		return (0);
 	}
+	return (0);
 }
