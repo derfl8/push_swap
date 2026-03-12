@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 15:50:08 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/12 20:32:07 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/12 21:10:17 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,18 +63,26 @@ int	main(int ac, char **av)
 		ft_printf("Index : %d\n\n", tmp->index);
 		tmp = tmp->next;
 	}
-	ra(&a);
+	// pb(&a, &b);
+	// tmp = a;
+	// ft_printf("pb :\n Stack A : \n");
+	// while (tmp)
+	// {
+	// 	ft_printf("Value : %d\n", tmp->value);
+	// 	ft_printf("Index : %d\n\n", tmp->index);
+	// 	tmp = tmp->next;
+	// }
+	// tmp = b;
+	// ft_printf("pb :\n Stack B : \n");
+	// while (tmp)
+	// {
+	// 	ft_printf("Value : %d\n", tmp->value);
+	// 	ft_printf("Index : %d\n\n", tmp->index);
+	// 	tmp = tmp->next;
+	// }
+	rra(&a);
 	tmp = a;
-	ft_printf("ra :\n");
-	while (tmp)
-	{
-		ft_printf("Value : %d\n", tmp->value);
-		ft_printf("Index : %d\n\n", tmp->index);
-		tmp = tmp->next;
-	}
-	pb(&a, &b);
-	tmp = b;
-	ft_printf("pb :\n");
+	ft_printf("rra :\n Stack A : \n");
 	while (tmp)
 	{
 		ft_printf("Value : %d\n", tmp->value);
