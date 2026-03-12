@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/09 17:37:38 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/12 14:03:47 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/12 15:18:02 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,6 @@ bool    dup_check(char **check);
 void	ft_add_back(t_tab **lst, t_tab *new);
 t_tab	*ft_new(int value);
 t_tab  *do_stack(char *parsed);
+void	*ft_free_stack(t_tab *array);
 
 #endif
