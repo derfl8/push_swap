@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 15:50:08 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/11 17:41:08 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/12 14:04:02 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ void	argkiller(int ac, char **av)
 int	main(int ac, char **av)
 {
 	bool	is_valid;
+	t_tab	*stack_a;
 
 	if (ac < 2)
 		return (0);
@@ -48,6 +49,13 @@ int	main(int ac, char **av)
 	{
 		write(2, "Error\n", 6);
 		return (0);
+	}
+	stack_a = do_stack(av[1]);
+	t_tab *tmp = stack_a;
+	while (tmp)
+	{
+		ft_printf("%d\n", tmp->value);
+		tmp = tmp->next;
 	}
 	return (0);
 }
