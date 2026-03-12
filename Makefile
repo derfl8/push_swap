@@ -8,7 +8,7 @@ SRCS	=	\
 push_swap.c	\
 parsing.c	\
 lst.c		\
-indexation.c\
+			\
 
 OBJS    = $(SRCS:.c=.o)
 

@@ -6,11 +6,29 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 16:57:20 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/12 16:46:39 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/12 16:50:20 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+int	index_rating(char **stack, char *value)
+{
+	int	i;
+	int	index;
+	int	valint;
+
+	i = 0;
+	index = 0;
+	valint = ft_atoi(value);
+	while (stack[i])
+	{
+		if (ft_atoi(stack[i]) < valint)
+			index++;
+		i++;
+	}
+	return (index);
+}
 
 void	ft_free_stack(t_tab *array)
 {
@@ -68,7 +86,7 @@ t_tab	*do_stack(char *parsed)
 	while (splited[i])
 	{
 		new = ft_new(ft_atoi(splited[i]), index_rating(splited, splited[i]));
-        i++;
+		i++;
 		if (!new)
 		{
 			ft_free(splited);
