@@ -1,42 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   indexation.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/14 16:55:30 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/12 16:42:33 by abegou           ###   ########.fr       */
+/*   Created: 2026/03/12 15:38:14 by abegou            #+#    #+#             */
+/*   Updated: 2026/03/12 16:45:43 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stddef.h>
+#include "push_swap.h"
 
-size_t	ft_strlen(const char *s)
+int	index_rating(char **stack, char *value)
 {
-	const char	*tmp = s;
+	int	i;
+	int	index;
+	int	valint;
 
-	while (*tmp)
-		tmp++;
-	return (tmp - s);
-}
-
-size_t	ft_strlenin(const char *s)
-{
-	size_t		i;
-	size_t		j;
-
-	j = 0;
 	i = 0;
-	if (s[i] == '-')
-		i++;
-	while (s[i] == '0')
-		i++;
-	while (s[i])
+	index = 0;
+	valint = ft_atoi(value);
+	while (stack[i])
 	{
+		if (ft_atoi(stack[i]) < valint)
+			index++;
 		i++;
-		j++;
 	}
-	return (j);
+	return (index);
 }
