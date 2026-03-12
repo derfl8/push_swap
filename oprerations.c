@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 17:06:03 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/12 22:10:39 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/12 22:44:39 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,15 +51,12 @@ void    rra(t_tab **a)
         return ;
     tmp = *a;
     tmp2 = ft_last(tmp);
-    while (tmp)
-    {
+    while (tmp -> next -> next)
         tmp = tmp -> next;
-        if (tmp -> next -> next == NULL)
-            break;
-    }
+    tmp2 -> next = tmp -> next;
+    tmp -> next = NULL;
     tmp2 -> next = *a;
     *a = tmp2;
-    tmp -> next = NULL;
     ft_printf("rra\n");
 }
 
