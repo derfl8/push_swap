@@ -7,7 +7,8 @@ LIBFT	= libft/libft.a
 SRCS	=		\
 push_swap.c		\
 parsing.c		\
-lst.c			\
+lst_init.c		\
+lst_tools.c		\
 oprerations.c	\
 
 OBJS    = $(SRCS:.c=.o)
