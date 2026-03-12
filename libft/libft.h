@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 13:08:44 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/11 17:45:17 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/12 12:59:04 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@
 
 typedef struct s_list
 {
-	void			*content;
+	int				value;
+	int				index;
 	struct s_list	*next;
 }					t_list;
 
@@ -59,7 +60,7 @@ void		ft_putstr_fd(char *s, int fd);
 void		ft_putendl_fd(char *s, int fd);
 void		ft_putnbr_fd(int n, int fd);
 char		*ft_itoa(int n);
-t_list		*ft_lstnew(void *content);
+t_list		*ft_lstnew(int value);
 void		ft_lstadd_front(t_list **lst, t_list *new);
 int			ft_lstsize(t_list *lst);
 t_list		*ft_lstlast(t_list *lst);
