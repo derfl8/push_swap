@@ -6,9 +6,20 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 17:06:03 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/12 17:09:30 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/12 19:09:34 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+void sa(t_tab **a)
+{
+    t_tab   *tmp;
+    t_tab   *tmp2;
+
+    tmp = *a;
+    tmp2 = tmp -> next;
+    tmp -> next = tmp2 -> next;
+    tmp2 -> next = tmp;
+    *a = tmp2;
+}

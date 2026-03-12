@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 15:50:08 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/12 16:41:25 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/12 18:42:42 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,16 @@ int	main(int ac, char **av)
 	while (tmp)
 	{
 		ft_printf("%d\n", tmp->value);
-		ft_printf("%d\n", tmp->index);
+		ft_printf("%d\n\n", tmp->index);
+		tmp = tmp->next;
+	}
+	sa(&a);
+	tmp = a;
+	int k = 3;
+	while (k--)
+	{
+		ft_printf("%d\n", tmp->value);
+		ft_printf("%d\n\n", tmp->index);
 		tmp = tmp->next;
 	}
 	return (0);

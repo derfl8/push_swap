@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/09 17:37:38 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/12 16:37:15 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/12 18:39:11 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,6 @@ t_tab				*ft_new(int value, int index);
 t_tab				*do_stack(char *parsed);
 void				ft_free_stack(t_tab *array);
 int					index_rating(char **stack, char *value);
+void				sa(t_tab **a);
 
 #endif
