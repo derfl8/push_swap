@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 15:50:08 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/13 17:51:16 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/13 18:21:39 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,53 +52,5 @@ int	main(int ac, char **av)
 	}
 	a = do_stack(av[1]);
 	wich_case(&a);
-	// t_tab	*tmp;
-	// tmp = a;
-	// while (tmp)
-	// {
-	// 	ft_printf("Value : %d\n", tmp->value);
-	// 	ft_printf("Index : %d\n\n", tmp->index);
-	// 	tmp = tmp->next;
-	// }
 	return (0);
 }
-
-/*
-	t_tab	*a;
-	t_tab	*b;
-	t_tab	*tmp;
-	a = do_stack(av[1]);
-	b = NULL;
-	tmp = a;
-	while (tmp)
-	{
-		ft_printf("Value : %d\n", tmp->value);
-		ft_printf("Index : %d\n\n", tmp->index);
-		tmp = tmp->next;
-	}
-	pb(&a, &b);
-	tmp = a;
-	ft_printf("pb :\n Stack A : \n");
-	while (tmp)
-	{
-		ft_printf("Value : %d\n", tmp->value);
-		ft_printf("Index : %d\n\n", tmp->index);
-		tmp = tmp->next;
-	}
-	tmp = b;
-	ft_printf("pb :\n Stack B : \n");
-	while (tmp)
-	{
-		ft_printf("Value : %d\n", tmp->value);
-		ft_printf("Index : %d\n\n", tmp->index);
-		tmp = tmp->next;
-	}
-	rra(&a);
-	tmp = a;
-	ft_printf("rra :\n Stack A : \n");
-	while (tmp)
-	{
-		ft_printf("Value : %d\n", tmp->value);
-		ft_printf("Index : %d\n\n", tmp->index);
-		tmp = tmp->next;
-	}*/

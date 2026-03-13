@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 17:06:03 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/12 22:47:10 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/13 19:30:19 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,8 @@ void	pb(t_tab **a, t_tab **b)
 {
 	t_tab	*tmp;
 
+	if (!*a)
+		return ;
 	tmp = *a;
 	*a = tmp->next;
 	tmp->next = *b;
@@ -75,6 +77,8 @@ void	pa(t_tab **a, t_tab **b)
 {
 	t_tab *tmp;
 
+	if (!*b)
+		return ;
 	tmp = *b;
 	*b = tmp->next;
 	tmp->next = *a;
