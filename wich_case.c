@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 22:23:28 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/13 16:06:35 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/13 16:07:55 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,10 @@ void	wich_case(t_tab **a)
 	if (already_sort(*a) == true)
 		return ;
 	if (how_many(*a) == 3)
-		three_sort(*a);
+		three_sort(a);
 	else if (how_many(*a) == 5)
-		five_sort(*a);
+		five_sort(a);
 	else
-		radix(*a);
+		radix(a);
 	return ;
 }
