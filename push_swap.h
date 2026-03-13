@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/09 17:37:38 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/12 21:07:21 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/13 14:45:57 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,6 @@ void				ra(t_tab **a);
 void				pb(t_tab **a, t_tab **b);
 void				pa(t_tab **a, t_tab **b);
 void    			rra(t_tab **a);
+bool				already_sort(t_tab **a);
 
 #endif
