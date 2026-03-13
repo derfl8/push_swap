@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 22:23:28 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/13 19:35:56 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/13 20:28:45 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	wich_case(t_tab **a)
 	else if (how_many(*a) == 2)
 		sa(a);
 	else
-		radix(a, &b, how_many(*a));
+		k_distrib(a, &b, how_many(*a));
 	ft_free_stack(a);
 	return ;
 }
