@@ -4,14 +4,15 @@ NAME	= push_swap
 HEADER	= push_swap.h
 PRINTF	= ft_printf/libftprintf.a
 LIBFT	= libft/libft.a
-SRCS	=		\
-push_swap.c		\
-parsing.c		\
-lst_init.c		\
-lst_tools.c		\
-oprerations.c	\
-wich_case.c		\
-algo.c			\
+SRCS	=			\
+push_swap.c			\
+parsing.c			\
+lst_init.c			\
+lst_tools.c			\
+oprerations.c		\
+wich_case.c			\
+algo.c				\
+more_operations.c	\
 
 OBJS    = $(SRCS:.c=.o)
 

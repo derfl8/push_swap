@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/09 17:37:38 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/13 18:33:52 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/13 20:09:36 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,14 @@ int		index_rating(char **stack, char *value);
 void	sa(t_tab **a);
 t_tab	*ft_last(t_tab *lst);
 void	ra(t_tab **a);
-void	pb(t_tab **a, t_tab **b);
-void	pa(t_tab **a, t_tab **b);
+void	rb(t_tab **b);
 void	rra(t_tab **a);
+void	rrb(t_tab **b);
+void	pa(t_tab **a, t_tab **b);
+void	pb(t_tab **a, t_tab **b);
 bool	already_sort(t_tab *a);
 void	wich_case(t_tab **a);
 void	three_sort(t_tab **a);
-void    radix(t_tab **a, t_tab **b, int size);
+void    k_distrib(t_tab **a, t_tab **b, int size);
 
 #endif
