@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/09 17:37:38 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/13 15:27:38 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/13 15:45:23 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,8 @@ t_tab				*ft_last(t_tab *lst);
 void				ra(t_tab **a);
 void				pb(t_tab **a, t_tab **b);
 void				pa(t_tab **a, t_tab **b);
-void    			rra(t_tab **a);
+void				rra(t_tab **a);
 bool				already_sort(t_tab *a);
+void				wich_case(t_tab **a);
 
 #endif

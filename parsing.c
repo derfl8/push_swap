@@ -68,7 +68,7 @@ bool	argcheck(char *arg)
 				|| arg[i + 1] == '\0'))
 			return (false);
 		else if (i > 0 && (arg[i] == '-' && (arg[i - 1] >= '0' && arg[i
-						- 1] <= '9')))
+					- 1] <= '9')))
 			return (false);
 		i++;
 	}

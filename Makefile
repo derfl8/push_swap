@@ -10,7 +10,7 @@ parsing.c		\
 lst_init.c		\
 lst_tools.c		\
 oprerations.c	\
-algo.c			\
+wich_case.c		\
 
 OBJS    = $(SRCS:.c=.o)
 

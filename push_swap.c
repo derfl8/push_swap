@@ -6,12 +6,11 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 15:50:08 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/13 15:27:23 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/13 15:47:01 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include "ft_printf/ft_printf.h"
 
 void	argkiller(int ac, char **av)
 {
@@ -34,6 +33,7 @@ void	argkiller(int ac, char **av)
 int	main(int ac, char **av)
 {
 	bool	is_valid;
+	t_tab	*a;
 
 	if (ac < 2)
 		return (0);
@@ -50,7 +50,12 @@ int	main(int ac, char **av)
 		write(2, "Error\n", 6);
 		return (0);
 	}
-// Print some test
+	a = do_stack(av[1]);
+	wich_case(&a);
+	return (0);
+}
+
+/*
 	t_tab	*a;
 	t_tab	*b;
 	t_tab	*tmp;
@@ -63,35 +68,29 @@ int	main(int ac, char **av)
 		ft_printf("Index : %d\n\n", tmp->index);
 		tmp = tmp->next;
 	}
-	// pb(&a, &b);
-	// tmp = a;
-	// ft_printf("pb :\n Stack A : \n");
-	// while (tmp)
-	// {
-	// 	ft_printf("Value : %d\n", tmp->value);
-	// 	ft_printf("Index : %d\n\n", tmp->index);
-	// 	tmp = tmp->next;
-	// }
-	// tmp = b;
-	// ft_printf("pb :\n Stack B : \n");
-	// while (tmp)
-	// {
-	// 	ft_printf("Value : %d\n", tmp->value);
-	// 	ft_printf("Index : %d\n\n", tmp->index);
-	// 	tmp = tmp->next;
-	// }
-	// rra(&a);
-	// tmp = a;
-	// ft_printf("rra :\n Stack A : \n");
-	// while (tmp)
-	// {
-	// 	ft_printf("Value : %d\n", tmp->value);
-	// 	ft_printf("Index : %d\n\n", tmp->index);
-	// 	tmp = tmp->next;
-	// }
-	if (already_sort(a) == true)
-		ft_printf("already sort\n");
-	else
-		ft_printf("not sort\n");
-	return (0);
-}
+	pb(&a, &b);
+	tmp = a;
+	ft_printf("pb :\n Stack A : \n");
+	while (tmp)
+	{
+		ft_printf("Value : %d\n", tmp->value);
+		ft_printf("Index : %d\n\n", tmp->index);
+		tmp = tmp->next;
+	}
+	tmp = b;
+	ft_printf("pb :\n Stack B : \n");
+	while (tmp)
+	{
+		ft_printf("Value : %d\n", tmp->value);
+		ft_printf("Index : %d\n\n", tmp->index);
+		tmp = tmp->next;
+	}
+	rra(&a);
+	tmp = a;
+	ft_printf("rra :\n Stack A : \n");
+	while (tmp)
+	{
+		ft_printf("Value : %d\n", tmp->value);
+		ft_printf("Index : %d\n\n", tmp->index);
+		tmp = tmp->next;
+	}*/

@@ -1,36 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lst_tools.c                                        :+:      :+:    :+:   */
+/*   wich_case.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/12 19:20:35 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/12 19:23:35 by abegou           ###   ########.fr       */
+/*   Created: 2026/03/12 22:23:28 by abegou            #+#    #+#             */
+/*   Updated: 2026/03/13 16:06:35 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_tab	*ft_last(t_tab *lst)
+int	how_many(t_tab *a)
 {
-	if (!lst)
-		return (0);
-	while (lst->next != NULL)
-		lst = lst->next;
-	return (lst);
+	int	i;
+
+	i = 1;
+	while (a->next)
+	{
+		a = a->next;
+		i++;
+	}
+	return (i);
 }
 
-void	ft_free_stack(t_tab *array)
+bool	already_sort(t_tab *a)
 {
-	t_tab *tmp;
-
-	tmp = array;
-	while (tmp)
+	while (a->next)
 	{
-		tmp = array;
-		array = array->next;
-		free(tmp);
+		if (a->index > a->next->index)
+			return (false);
+		a = a->next;
 	}
+	return (true);
+}
+
+void	wich_case(t_tab **a)
+{
+	if (already_sort(*a) == true)
+		return ;
+	if (how_many(*a) == 3)
+		three_sort(*a);
+	else if (how_many(*a) == 5)
+		five_sort(*a);
+	else
+		radix(*a);
 	return ;
 }
