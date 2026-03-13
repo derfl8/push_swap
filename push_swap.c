@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 15:50:08 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/13 15:06:26 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/13 15:27:23 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ int	main(int ac, char **av)
 	// 	ft_printf("Index : %d\n\n", tmp->index);
 	// 	tmp = tmp->next;
 	// }
-	if (already_sort(&a) == true)
+	if (already_sort(a) == true)
 		ft_printf("already sort\n");
 	else
 		ft_printf("not sort\n");
