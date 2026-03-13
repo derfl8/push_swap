@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/09 17:37:38 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/13 15:45:23 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/13 17:53:15 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ bool				dup_check(char **check);
 void				ft_add_back(t_tab **lst, t_tab *new);
 t_tab				*ft_new(int value, int index);
 t_tab				*do_stack(char *parsed);
-void				ft_free_stack(t_tab *array);
+void				ft_free_stack(t_tab **array);
 int					index_rating(char **stack, char *value);
 void				sa(t_tab **a);
 t_tab				*ft_last(t_tab *lst);
@@ -44,5 +44,6 @@ void				pa(t_tab **a, t_tab **b);
 void				rra(t_tab **a);
 bool				already_sort(t_tab *a);
 void				wich_case(t_tab **a);
+void				three_sort(t_tab **a);
 
 #endif

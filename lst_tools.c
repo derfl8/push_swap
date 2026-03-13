@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 19:20:35 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/12 19:23:35 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/13 18:03:34 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,14 @@ t_tab	*ft_last(t_tab *lst)
 	return (lst);
 }
 
-void	ft_free_stack(t_tab *array)
+void	ft_free_stack(t_tab **array)
 {
 	t_tab *tmp;
 
-	tmp = array;
-	while (tmp)
+	while (*array)
 	{
-		tmp = array;
-		array = array->next;
+		tmp = *array;
+		(*array) = (*array)->next;
 		free(tmp);
 	}
 	return ;

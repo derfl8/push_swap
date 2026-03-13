@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 15:50:08 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/13 15:47:01 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/13 17:51:16 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,14 @@ int	main(int ac, char **av)
 	}
 	a = do_stack(av[1]);
 	wich_case(&a);
+	// t_tab	*tmp;
+	// tmp = a;
+	// while (tmp)
+	// {
+	// 	ft_printf("Value : %d\n", tmp->value);
+	// 	ft_printf("Index : %d\n\n", tmp->index);
+	// 	tmp = tmp->next;
+	// }
 	return (0);
 }
 

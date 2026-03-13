@@ -11,6 +11,7 @@ lst_init.c		\
 lst_tools.c		\
 oprerations.c	\
 wich_case.c		\
+algo.c			\
 
 OBJS    = $(SRCS:.c=.o)
 

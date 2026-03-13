@@ -5,20 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/12 22:23:28 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/13 15:27:41 by abegou           ###   ########.fr       */
+/*   Created: 2026/03/13 16:30:38 by abegou            #+#    #+#             */
+/*   Updated: 2026/03/13 18:05:52 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-bool already_sort(t_tab *a)
+void    three_sort(t_tab **a)
 {
-    while (a -> next)
-    {
-        if (a -> index > a -> next -> index)
-            return (false);
-        a = a -> next;
-        }
-    return (true);
+    if (((*a) -> index  == 1 && (*a) -> next -> index == 2) ||
+        ((*a) -> index  == 0 && (*a) -> next -> index == 2))
+        rra(a);
+    if ((*a) -> index  == 2)
+        ra(a);
+    if (((*a) -> index  == 1 && (*a) -> next -> index == 0))
+        sa(a);
+}
+
+void    five_sort(t_tab **a)
+{
+    
 }

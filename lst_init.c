@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 16:57:20 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/13 15:59:30 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/13 17:54:07 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ t_tab	*do_stack(char *parsed)
 		if (!new)
 		{
 			ft_free(splited);
-			ft_free_stack(a);
+			ft_free_stack(&a);
 			return (NULL);
 		}
 		ft_add_back(&a, new);
