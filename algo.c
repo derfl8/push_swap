@@ -21,24 +21,24 @@ static void	three_sort_for_five(t_tab **a)
 		ra(a);
 	if (((*a)->index == 3 && (*a)->next->index == 2))
 		sa(a);
-    return ;
+	return ;
 }
 
 void	sort_five(t_tab **a, t_tab **b)
 {
-    while (how_many(*a) > 3)
-    {
-        if ((*a) -> index < 2)
-            pb(a, b);
-        else
-            ra(a);
-    }
-    three_sort_for_five(a);
-    if ((*b) -> index == 0)
-        rb(b);
-    pa(a, b);
-    pa(a, b);
-    return ;
+	while (how_many(*a) > 3)
+	{
+		if ((*a)->index < 2)
+			pb(a, b);
+		else
+			ra(a);
+	}
+	three_sort_for_five(a);
+	if ((*b)->index == 0)
+		rb(b);
+	pa(a, b);
+	pa(a, b);
+	return ;
 }
 
 void	three_sort(t_tab **a)
@@ -50,7 +50,7 @@ void	three_sort(t_tab **a)
 		ra(a);
 	if (((*a)->index == 1 && (*a)->next->index == 0))
 		sa(a);
-    return ;
+	return ;
 }
 
 void	comeback_of_the_b_stack_in_a(t_tab **a, t_tab **b)
