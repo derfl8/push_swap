@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/13 16:30:38 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/14 12:01:51 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/14 12:56:50 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,24 @@ int	index_stalker(t_tab *a_or_b, int index_stalked)
 void	comeback_of_the_b_stack_in_a(t_tab **a, t_tab **b)
 {
 	int	location;
+    int reach;
 
+    location = index_stalker(*b, how_many(*b) - 1);
 	while (b)
 	{
-		location = how_many(*b) - 1;
+		reach = how_many(*b);
+        location = index_stalker(*b, reach);
+        if (location <= (*b) -> index / 2)
+        {
+            while ((*b) -> index != reach)
+                rb(b);
+        }
+        else
+        {
+            while ((*b) -> index != reach)
+                rrb(b);
+        }
+        pa(a, b);
 	}
 }
 
