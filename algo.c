@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/13 16:30:38 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/14 14:11:43 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/14 14:26:49 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ void	sort_five(t_tab **a, t_tab **b)
             ra(a);
     }
     three_sort(a);
+    if ((*b) -> index == 1)
+        sb(b);
     pa(a, b);
     pa(a, b);
     return ;
