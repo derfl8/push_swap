@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 14:09:48 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/14 11:59:32 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/14 13:48:58 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,13 +62,14 @@ bool	argcheck(char *arg)
 	i = 0;
 	while (arg[i])
 	{
-		if (arg[i] != ' ' && arg[i] != '-' && (arg[i] < '0' || arg[i] > '9'))
+		if (arg[i] != ' ' && arg[i] != '-' && arg[i] != '+' && (arg[i] < '0'
+				|| arg[i] > '9'))
 			return (false);
-		else if (arg[i] == '-' && (arg[i + 1] == ' ' || arg[i + 1] == '-'
-				|| arg[i + 1] == '\0'))
+		else if ((arg[i] == '-' || arg[i] == '+') && (arg[i + 1] == ' ' || arg[i
+					+ 1] == '-' || arg[i + 1] == '+' || arg[i + 1] == '\0'))
 			return (false);
-		else if (i > 0 && (arg[i] == '-' && (arg[i - 1] >= '0' && arg[i
-						- 1] <= '9')))
+		else if (i > 0 && ((arg[i] == '-' || arg[i] == '-') && (arg[i
+						- 1] >= '0' && arg[i - 1] <= '9')))
 			return (false);
 		i++;
 	}

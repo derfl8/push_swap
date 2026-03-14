@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 22:23:28 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/14 10:40:29 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/14 13:31:37 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ int	how_many(t_tab *a)
 
 bool	already_sort(t_tab *a)
 {
+	if (!a)
+		return (true);
 	while (a->next)
 	{
 		if (a->index > a->next->index)
