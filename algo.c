@@ -6,25 +6,36 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/13 16:30:38 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/14 14:26:49 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/14 15:07:37 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <threads.h>
+
+static void	three_sort_for_five(t_tab **a)
+{
+	if (((*a)->index == 3 && (*a)->next->index == 4) || ((*a)->index == 2
+			&& (*a)->next->index == 4))
+		rra(a);
+	if ((*a)->index == 4)
+		ra(a);
+	if (((*a)->index == 3 && (*a)->next->index == 2))
+		sa(a);
+    return ;
+}
 
 void	sort_five(t_tab **a, t_tab **b)
 {
     while (how_many(*a) > 3)
     {
-        if ((*a) -> index <= 1)
+        if ((*a) -> index < 2)
             pb(a, b);
         else
             ra(a);
     }
-    three_sort(a);
-    if ((*b) -> index == 1)
-        sb(b);
+    three_sort_for_five(a);
+    if ((*b) -> index == 0)
+        rb(b);
     pa(a, b);
     pa(a, b);
     return ;
