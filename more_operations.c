@@ -6,11 +6,11 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/13 20:06:21 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/13 20:18:27 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/14 11:36:32 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap"
+#include "push_swap.h"
 
 void	rb(t_tab **b)
 {

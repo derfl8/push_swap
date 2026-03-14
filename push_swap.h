@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/09 17:37:38 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/13 20:32:52 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/14 11:58:46 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ void	pb(t_tab **a, t_tab **b);
 bool	already_sort(t_tab *a);
 void	wich_case(t_tab **a);
 void	three_sort(t_tab **a);
-void    k_distrib(t_tab **a, t_tab **b, int size);
+void	k_distrib(t_tab **a, t_tab **b);
+int		how_many(t_tab *a);
+void	comeback_of_the_b_stack_in_a(t_tab **a, t_tab **b);
 
 #endif

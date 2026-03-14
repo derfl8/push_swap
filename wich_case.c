@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 22:23:28 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/13 20:28:45 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/14 10:40:29 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ bool	already_sort(t_tab *a)
 
 void	wich_case(t_tab **a)
 {
-	t_tab *b;
+	t_tab	*b;
 
 	b = NULL;
 	if (already_sort(*a) == true)
@@ -51,7 +51,7 @@ void	wich_case(t_tab **a)
 	else if (how_many(*a) == 2)
 		sa(a);
 	else
-		k_distrib(a, &b, how_many(*a));
+		k_distrib(a, &b);
 	ft_free_stack(a);
 	return ;
 }
