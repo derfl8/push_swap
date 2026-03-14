@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 19:20:35 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/14 11:59:19 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/14 13:58:05 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,19 @@ void	ft_free_stack(t_tab **array)
 		free(tmp);
 	}
 	return ;
+}
+
+int	index_stalker(t_tab *a_or_b, int index_stalked)
+{
+	int	location;
+
+	location = 0;
+	while (a_or_b)
+	{
+		if (a_or_b->index == index_stalked)
+			return (location);
+		a_or_b = a_or_b->next;
+		location++;
+	}
+	return (-1);
 }

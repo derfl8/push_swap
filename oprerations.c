@@ -6,7 +6,7 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 17:06:03 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/14 12:00:23 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/14 14:03:09 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ void	sa(t_tab **a)
 	tmp2->next = tmp;
 	*a = tmp2;
 	ft_printf("sa\n");
+	return ;
 }
 
 void	ra(t_tab **a)
@@ -40,6 +41,7 @@ void	ra(t_tab **a)
 	tmp->next = NULL;
 	tmp2->next = tmp;
 	ft_printf("ra\n");
+	return ;
 }
 
 void	rra(t_tab **a)
@@ -57,6 +59,7 @@ void	rra(t_tab **a)
 	tmp2->next = *a;
 	*a = tmp2;
 	ft_printf("rra\n");
+	return ;
 }
 
 void	pb(t_tab **a, t_tab **b)

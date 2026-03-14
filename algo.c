@@ -6,11 +6,27 @@
 /*   By: abegou <abegou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/13 16:30:38 by abegou            #+#    #+#             */
-/*   Updated: 2026/03/14 13:28:14 by abegou           ###   ########.fr       */
+/*   Updated: 2026/03/14 14:11:43 by abegou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <threads.h>
+
+void	sort_five(t_tab **a, t_tab **b)
+{
+    while (how_many(*a) > 3)
+    {
+        if ((*a) -> index <= 1)
+            pb(a, b);
+        else
+            ra(a);
+    }
+    three_sort(a);
+    pa(a, b);
+    pa(a, b);
+    return ;
+}
 
 void	three_sort(t_tab **a)
 {
@@ -21,21 +37,7 @@ void	three_sort(t_tab **a)
 		ra(a);
 	if (((*a)->index == 1 && (*a)->next->index == 0))
 		sa(a);
-}
-
-static int	index_stalker(t_tab *a_or_b, int index_stalked)
-{
-	int	location;
-
-	location = 0;
-	while (a_or_b)
-	{
-		if (a_or_b->index == index_stalked)
-			return (location);
-		a_or_b = a_or_b->next;
-		location++;
-	}
-	return (-1);
+    return ;
 }
 
 void	comeback_of_the_b_stack_in_a(t_tab **a, t_tab **b)
